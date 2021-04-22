@@ -1,0 +1,9 @@
+To Do:
+
+-teacher view students' grades
+-teacher edit students' grades/tests
+
+
++student class grades
++enroll student in class
++fix table resize for profile data
