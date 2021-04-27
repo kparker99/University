@@ -36,7 +36,7 @@
        <string notr="true">background-color: rgb(57, 24, 71);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -3215,7 +3215,7 @@ border-width: 0px;</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">background: transparent;
+                              <string notr="true">background: white;
 border: 1px solid #808080;</string>
                              </property>
                             </widget>
@@ -3268,7 +3268,7 @@ border-width: 0px;</string>
                           </layout>
                          </item>
                          <item>
-                          <widget class="QTableWidget" name="tableWidget_2">
+                          <widget class="QTableWidget" name="all_grades_table">
                            <property name="styleSheet">
                             <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                            </property>
@@ -3280,18 +3280,7 @@ border-width: 0px;</string>
                            </property>
                            <column>
                             <property name="text">
-                             <string>First Name</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                           </column>
-                           <column>
-                            <property name="text">
-                             <string>Last Name</string>
+                             <string>Student</string>
                             </property>
                             <property name="font">
                              <font>

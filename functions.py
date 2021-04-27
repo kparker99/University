@@ -9,8 +9,6 @@ from PyQt5 import QtGui as qtg
 from design import Ui_MainWindow
 import sql_functions as sql
 
-def func ():
-    pass
 
 class GUI_Window(qtw.QMainWindow):
     def __init__(self, *args, **kwargs):
@@ -61,7 +59,7 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.profile_button_2.clicked.connect(self.get_profile_data_teacher)
         self.ui.classes_button_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
         self.ui.logout_button_2.clicked.connect(self.logout)
-        self.ui.student_class_dropdown.activated.connect(self.get_test_grades)
+        self.ui.student_class_dropdown.activated.connect(self.get_class_grades)
         self.ui.add_grade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
     # END BUTTONS
 
@@ -317,6 +315,22 @@ class GUI_Window(qtw.QMainWindow):
             class_list = class_list + list(tuple)
         self.ui.class_dropdown.addItems(class_list)
         return class_list
+
+    def get_class_grades(self):
+        self.ui.all_grades_table.clearContents()
+        course = self.ui.class_dropdown.currentText()
+        info = sql.get_info_from_db("SELECT SELECT user_id, test_number, test_date, grade FROM university.grades WHERE class_id=%s", (course))
+        if info == ():
+            self.ui.total_grade.setText("No grade available")
+        else:
+            lis = []
+            for x in range(len(info)):
+                lis.append(info[x][1])
+                avg = sum(lis)/len(lis)
+            self.ui.total_grade.setText("Class Grade: {:.2f}%".format(avg))
+            for row_number, row_data in enumerate(info):
+                for column_number, data in enumerate(row_data):
+                    self.ui.class_grades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
