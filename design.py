@@ -1276,7 +1276,7 @@ class Ui_MainWindow(object):
         self.t_profile_table.horizontalHeader().setVisible(False)
         self.t_profile_table.horizontalHeader().setHighlightSections(True)
         self.t_profile_table.horizontalHeader().setMinimumSectionSize(52)
-        self.t_profile_table.verticalHeader().setVisible(False)
+        self.t_profile_table.verticalHeader().setVisible(True)
         self.t_profile_table.verticalHeader().setDefaultSectionSize(40)
         self.t_profile_table.verticalHeader().setMinimumSectionSize(40)
         self.verticalLayout_15.addWidget(self.t_profile_table)
@@ -1544,8 +1544,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(3)
-        self.stackedWidget_2.setCurrentIndex(1)
-        self.stackedWidget_3.setCurrentIndex(2)
+        self.stackedWidget_2.setCurrentIndex(3)
+        self.stackedWidget_3.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

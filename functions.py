@@ -66,13 +66,13 @@ class GUI_Window(qtw.QMainWindow):
 
 
     # VALIDATORS FOR FIELDS IN NEW_ACCOUNT_PAGE HERE
-        # state lineedit
+        # state field
         state_regex = qtc.QRegExp("[a-zA-Z][a-zA-Z]")
 
         state_validator = qtg.QRegExpValidator(state_regex, self.ui.n_state_field)
         self.ui.n_state_field.setValidator(state_validator)
 
-        # first name, last name, city lineedits
+        # first name, last name, city fields
         name_regex = qtc.QRegExp("([a-zA-Z-_]+ )+")
 
         first_name_validator = qtg.QRegExpValidator(name_regex, self.ui.n_firstname_field)
@@ -81,6 +81,12 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.n_lastname_field.setValidator(last_name_validator)
         city_validator = qtg.QRegExpValidator(name_regex, self.ui.n_city_field)
         self.ui.n_city_field.setValidator(city_validator)
+
+        # grade field
+        grade_regex = qtc.QRegExp("[0-9][0-9]")
+        grade_validator = qtg.QRegExpValidator(grade_regex, self.ui.t_addgrade_grade_field)
+        self.ui.t_addgrade_grade_field.setValidator(grade_validator)
+
     # END VALIDATORS
 
     def _message(self, title, text):
@@ -120,9 +126,10 @@ class GUI_Window(qtw.QMainWindow):
             elif role == 2:
                 self.ui.stackedWidget.setCurrentIndex(3)
                 self.ui.stackedWidget_3.setCurrentIndex(0)
+                print('hi')
                 self.ui.t_userwelcome_field.setText("{} {}".format(first, last))
                 self.t_grades_teacher_classes(username)
-                self.s_profile_profile_data_teacher()
+                self.t_profile_profile_data()
                 self.showMaximized()
                 return username
             elif role == 3:

@@ -1807,7 +1807,7 @@ border-width: 0px;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
@@ -2998,7 +2998,7 @@ border-width: 0px;</string>
                 <item>
                  <widget class="QStackedWidget" name="stackedWidget_3">
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="t_profile_page">
                    <layout class="QGridLayout" name="gridLayout_17">
@@ -3056,7 +3056,7 @@ border-width: 0px;</string>
                           <bool>true</bool>
                          </attribute>
                          <attribute name="verticalHeaderVisible">
-                          <bool>false</bool>
+                          <bool>true</bool>
                          </attribute>
                          <attribute name="verticalHeaderMinimumSectionSize">
                           <number>40</number>
