@@ -45,12 +45,12 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.back_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
 
         # page 2 (student_page)
-        # self.ui.profile_button.clicked.connect(lambda: self.ui.stackedWidget_2.setCurrentIndex(3))  # TODO: fix so it shows profile page
         self.ui.profile_button.clicked.connect(self.get_profile_data)
         self.ui.classes_button.clicked.connect(self.get_course_data)
         self.ui.enroll_button.clicked.connect(self.enroll)
         self.ui.grades_button.clicked.connect(lambda: self.ui.stackedWidget_2.setCurrentIndex(3))
-        self.ui.class_grades_table.clicked.connect(self.get_test_grades)
+        self.ui.grades_button.clicked.connect(self.get_test_grades)
+        self.ui.student_class_dropdown.activated.connect(self.get_test_grades)
         self.ui.logout_button.clicked.connect(self.logout)
         self.ui.close_button.clicked.connect(lambda: self.ui.stackedWidget_2.setCurrentIndex(1))
         self.ui.enroll_table.cellClicked.connect(self.get_class_data)
@@ -58,9 +58,10 @@ class GUI_Window(qtw.QMainWindow):
         # page 3 (teacher_page)
         self.ui.profile_button_2.clicked.connect(self.get_profile_data_teacher)
         self.ui.classes_button_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
+        self.ui.classes_button_2.clicked.connect(self.get_class_grades)
         self.ui.logout_button_2.clicked.connect(self.logout)
-        self.ui.student_class_dropdown.activated.connect(self.get_class_grades)
-        self.ui.add_grade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
+        self.ui.class_dropdown.activated.connect(self.get_class_grades)
+        self.ui.t_grades_addgrade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
     # END BUTTONS
 
 
@@ -318,19 +319,14 @@ class GUI_Window(qtw.QMainWindow):
 
     def get_class_grades(self):
         self.ui.all_grades_table.clearContents()
+        self.ui.no_grades_label.clear()
         course = self.ui.class_dropdown.currentText()
-        info = sql.get_info_from_db("SELECT SELECT user_id, test_number, test_date, grade FROM university.grades WHERE class_id=%s", (course))
+        info = sql.get_info_from_db("SELECT user_id, test_number, test_date, grade FROM university.grades WHERE class_id=%s", (course))
         if info == ():
-            self.ui.total_grade.setText("No grade available")
-        else:
-            lis = []
-            for x in range(len(info)):
-                lis.append(info[x][1])
-                avg = sum(lis)/len(lis)
-            self.ui.total_grade.setText("Class Grade: {:.2f}%".format(avg))
-            for row_number, row_data in enumerate(info):
-                for column_number, data in enumerate(row_data):
-                    self.ui.class_grades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
+            self.ui.no_grades_label.setText("No test grades available")
+        for row_number, row_data in enumerate(info):
+            for column_number, data in enumerate(row_data):
+                self.ui.all_grades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
 
 if __name__ == '__main__':
     app = qtw.QApplication([])

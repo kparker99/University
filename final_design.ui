@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1176</width>
-    <height>776</height>
+    <height>798</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -987,7 +987,7 @@ border: 1px solid #808080;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background: transparent;
+                   <string notr="true">
 border: 1px solid #808080;</string>
                   </property>
                   <property name="maximumDateTime">
@@ -1807,7 +1807,7 @@ border-width: 0px;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>3</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="profile_page">
                    <property name="minimumSize">
@@ -2998,7 +2998,7 @@ border-width: 0px;</string>
                 <item>
                  <widget class="QStackedWidget" name="stackedWidget_3">
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="profile_page_teacher">
                    <layout class="QGridLayout" name="gridLayout_17">
@@ -3056,7 +3056,7 @@ border-width: 0px;</string>
                           <bool>true</bool>
                          </attribute>
                          <attribute name="verticalHeaderVisible">
-                          <bool>false</bool>
+                          <bool>true</bool>
                          </attribute>
                          <attribute name="verticalHeaderMinimumSectionSize">
                           <number>40</number>
@@ -3215,13 +3215,12 @@ border-width: 0px;</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">background: white;
-border: 1px solid #808080;</string>
+                              <string notr="true">border: 1px solid #808080;</string>
                              </property>
                             </widget>
                            </item>
                            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                            <widget class="QPushButton" name="add_grade">
+                            <widget class="QPushButton" name="t_grades_addgrade">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -3253,6 +3252,26 @@ border-width: 0px;</string>
                             </widget>
                            </item>
                            <item>
+                            <widget class="QLabel" name="no_grades_label">
+                             <property name="minimumSize">
+                              <size>
+                               <width>300</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
                             <spacer name="horizontalSpacer">
                              <property name="orientation">
                               <enum>Qt::Horizontal</enum>
@@ -3278,6 +3297,25 @@ border-width: 0px;</string>
                            <property name="editTriggers">
                             <set>QAbstractItemView::NoEditTriggers</set>
                            </property>
+                           <property name="showGrid">
+                            <bool>false</bool>
+                           </property>
+                           <property name="rowCount">
+                            <number>10</number>
+                           </property>
+                           <attribute name="verticalHeaderVisible">
+                            <bool>false</bool>
+                           </attribute>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
+                           <row/>
                            <column>
                             <property name="text">
                              <string>Student</string>
@@ -3379,7 +3417,7 @@ border-width: 0px;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="comboBox">
+                          <widget class="QComboBox" name="t_agrade_class_drop">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3393,7 +3431,7 @@ border-width: 0px;</string>
                             </size>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                           </widget>
@@ -3429,7 +3467,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="comboBox_2">
+                          <widget class="QComboBox" name="t_agrade_firstname_drop">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
@@ -3443,7 +3481,7 @@ border: 1px solid #808080;</string>
                             </size>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                           </widget>
@@ -3479,7 +3517,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="comboBox_3">
+                          <widget class="QComboBox" name="t_agrade_lastname_drop">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
@@ -3493,7 +3531,7 @@ border: 1px solid #808080;</string>
                             </size>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                           </widget>
@@ -3529,7 +3567,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="first_name_field_4">
+                          <widget class="QLineEdit" name="t_agrade_testno_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3551,7 +3589,7 @@ border: 1px solid #808080;</string>
                             <cursorShape>IBeamCursor</cursorShape>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                            <property name="maxLength">
@@ -3590,7 +3628,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QDateEdit" name="dob_field_2">
+                          <widget class="QDateEdit" name="t_agrade_testdate_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3609,7 +3647,7 @@ border: 1px solid #808080;</string>
                             </font>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                            <property name="maximumDateTime">
@@ -3681,7 +3719,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="first_name_field_6">
+                          <widget class="QLineEdit" name="t_agrade_grade_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3703,7 +3741,7 @@ border: 1px solid #808080;</string>
                             <cursorShape>IBeamCursor</cursorShape>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background: transparent;
+                            <string notr="true">
 border: 1px solid #808080;</string>
                            </property>
                            <property name="maxLength">
@@ -3714,7 +3752,7 @@ border: 1px solid #808080;</string>
                         </layout>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="pushButton">
+                        <widget class="QPushButton" name="t_agrade_submit_btn">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
