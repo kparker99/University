@@ -1,9 +1,15 @@
-To Do:
+Pages/Items Naming Standard: <l|n|t|s>_<page>_<label>_<field|btn|drop|table|label>
+Functions Naming Standard: <_|t|s>_<page>_<function>
 
--teacher view students' grades
+To Do:
+-teacher add students' grades
 -teacher edit students' grades/tests
+-update function descriptions
 
 
 +student class grades
 +enroll student in class
 +fix table resize for profile data
++teacher view students' grades
++update naming standard for pages & items (<l|n|t|s>_<page>_<label>_<field|btn|drop|table|label>)
++update naming standard for functions (<t|s>_<page>_<function>)

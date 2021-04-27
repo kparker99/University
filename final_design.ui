@@ -129,7 +129,7 @@ border-radius: 25px</string>
                 <number>30</number>
                </property>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QLineEdit" name="username_field">
+                <widget class="QLineEdit" name="l_username_field">
                  <property name="minimumSize">
                   <size>
                    <width>250</width>
@@ -248,7 +248,7 @@ border: 1px solid #808080;</string>
                 </widget>
                </item>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QLineEdit" name="password_field">
+                <widget class="QLineEdit" name="l_password_field">
                  <property name="minimumSize">
                   <size>
                    <width>250</width>
@@ -370,7 +370,7 @@ border: 1px solid #808080;</string>
                 </widget>
                </item>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QPushButton" name="login_button">
+                <widget class="QPushButton" name="l_login_btn">
                  <property name="minimumSize">
                   <size>
                    <width>250</width>
@@ -402,7 +402,7 @@ border-width: 0px;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="new_account_button">
+                <widget class="QPushButton" name="l_newaccount_btn">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -761,7 +761,7 @@ border-radius: 25px</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <item>
-               <widget class="QPushButton" name="back_button">
+               <widget class="QPushButton" name="n_back_btn">
                 <property name="maximumSize">
                  <size>
                   <width>70</width>
@@ -906,7 +906,7 @@ border-radius: 25px</string>
                  <number>30</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="first_name_field">
+                 <widget class="QLineEdit" name="n_firstname_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -937,7 +937,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="last_name_field">
+                 <widget class="QLineEdit" name="n_lastname_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -968,7 +968,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QDateEdit" name="dob_field">
+                 <widget class="QDateEdit" name="n_dob_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1137,7 +1137,7 @@ border: 1px solid #808080;</string>
                  <number>30</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="address_field">
+                 <widget class="QLineEdit" name="n_address_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1165,7 +1165,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="city_field">
+                 <widget class="QLineEdit" name="n_city_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1193,7 +1193,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="state_field">
+                 <widget class="QLineEdit" name="n_state_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1332,7 +1332,7 @@ border: 1px solid #808080;</string>
                  <number>30</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="phone_field">
+                 <widget class="QLineEdit" name="n_phone_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1360,7 +1360,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="enter_password_field">
+                 <widget class="QLineEdit" name="n_enterpassword_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1386,7 +1386,7 @@ border: 1px solid #808080;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="confirm_password_field">
+                 <widget class="QLineEdit" name="n_confirmpassword_field">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -1435,7 +1435,7 @@ border: 1px solid #808080;</string>
                  <number>0</number>
                 </property>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QPushButton" name="create_account_button">
+                 <widget class="QPushButton" name="n_createaccount_btn">
                   <property name="enabled">
                    <bool>true</bool>
                   </property>
@@ -1585,7 +1585,7 @@ border-width: 0px;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="user_welcome">
+                 <widget class="QLabel" name="s_userwelcome_field">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1614,7 +1614,7 @@ border-width: 0px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="logout_button">
+                 <widget class="QPushButton" name="s_logout_btn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1648,7 +1648,7 @@ border-width: 0px;
               <number>0</number>
              </property>
              <item>
-              <widget class="QFrame" name="menu_bar">
+              <widget class="QFrame" name="s_menu_bar">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -1690,7 +1690,7 @@ border-width: 0px;
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="profile_button">
+                  <widget class="QPushButton" name="s_profile_btn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -1722,7 +1722,7 @@ border-width: 0px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="classes_button">
+                  <widget class="QPushButton" name="s_classes_btn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -1754,7 +1754,7 @@ border-width: 0px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="grades_button">
+                  <widget class="QPushButton" name="s_grades_btn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -1807,9 +1807,9 @@ border-width: 0px;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>0</number>
+                   <number>1</number>
                   </property>
-                  <widget class="QWidget" name="profile_page">
+                  <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -1862,7 +1862,7 @@ border-width: 0px;</string>
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QTableWidget" name="profile_table">
+                          <widget class="QTableWidget" name="s_profile_profile_table">
                            <property name="minimumSize">
                             <size>
                              <width>950</width>
@@ -2022,7 +2022,7 @@ border-width: 0px;</string>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="enroll_page">
+                  <widget class="QWidget" name="s_enroll_page">
                    <layout class="QGridLayout" name="gridLayout_10">
                     <property name="leftMargin">
                      <number>0</number>
@@ -2064,7 +2064,7 @@ border-width: 0px;</string>
                         <number>0</number>
                        </property>
                        <item row="0" column="0">
-                        <widget class="QTableWidget" name="enroll_table">
+                        <widget class="QTableWidget" name="s_enroll_enroll_table">
                          <property name="font">
                           <font>
                            <family>MS Shell Dlg 2</family>
@@ -2195,7 +2195,7 @@ border-width: 0px;</string>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="course_enroll_page">
+                  <widget class="QWidget" name="s_courseenroll_page">
                    <layout class="QGridLayout" name="gridLayout_8">
                     <property name="leftMargin">
                      <number>0</number>
@@ -2234,7 +2234,7 @@ border-width: 0px;</string>
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="course_name">
+                        <widget class="QLabel" name="s_courseenroll_coursename_field">
                          <property name="font">
                           <font>
                            <pointsize>14</pointsize>
@@ -2276,7 +2276,7 @@ border-width: 0px;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLabel" name="credits">
+                          <widget class="QLabel" name="s_courseenroll_credits_field">
                            <property name="font">
                             <font>
                              <pointsize>10</pointsize>
@@ -2310,7 +2310,7 @@ border-width: 0px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="course_description">
+                        <widget class="QLabel" name="s_courseenroll_coursedesc_field">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                            <horstretch>0</horstretch>
@@ -2334,7 +2334,7 @@ border-width: 0px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QTableWidget" name="classes_table">
+                        <widget class="QTableWidget" name="s_courseenroll_classes_table">
                          <property name="font">
                           <font>
                            <family>MS Shell Dlg 2</family>
@@ -2424,7 +2424,7 @@ border-width: 0px;</string>
                        <item>
                         <layout class="QHBoxLayout" name="horizontalLayout_4">
                          <item>
-                          <widget class="QPushButton" name="enroll_button">
+                          <widget class="QPushButton" name="s_courseenroll_enroll_btn">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -2456,7 +2456,7 @@ border-width: 0px;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="close_button">
+                          <widget class="QPushButton" name="s_courseenroll_close_btn">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -2494,7 +2494,7 @@ border-width: 0px;</string>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="class_grades">
+                  <widget class="QWidget" name="s_classgrades_page">
                    <layout class="QGridLayout" name="gridLayout_11">
                     <property name="leftMargin">
                      <number>0</number>
@@ -2540,7 +2540,7 @@ border-width: 0px;</string>
                          <item>
                           <layout class="QHBoxLayout" name="horizontalLayout_11">
                            <item>
-                            <widget class="QComboBox" name="student_class_dropdown">
+                            <widget class="QComboBox" name="s_classgrades_class_drop">
                              <property name="minimumSize">
                               <size>
                                <width>300</width>
@@ -2569,7 +2569,7 @@ background-color: #white;</string>
                           </layout>
                          </item>
                          <item>
-                          <widget class="QLabel" name="total_grade">
+                          <widget class="QLabel" name="s_classgrades_totalgrade_field">
                            <property name="font">
                             <font>
                              <pointsize>12</pointsize>
@@ -2583,7 +2583,7 @@ background-color: #white;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QTableWidget" name="class_grades_table">
+                          <widget class="QTableWidget" name="s_classgrades_grades_table">
                            <property name="font">
                             <font>
                              <family>MS Shell Dlg 2</family>
@@ -2790,7 +2790,7 @@ background-color: #white;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="user_welcome_2">
+                 <widget class="QLabel" name="t_userwelcome_field">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -2819,7 +2819,7 @@ background-color: #white;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="logout_button_2">
+                 <widget class="QPushButton" name="t_logout_btn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -2895,7 +2895,7 @@ border-width: 0px;
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="profile_button_2">
+                  <widget class="QPushButton" name="t_profile_btn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -2927,7 +2927,7 @@ border-width: 0px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="classes_button_2">
+                  <widget class="QPushButton" name="t_classes_btn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -2998,9 +2998,9 @@ border-width: 0px;</string>
                 <item>
                  <widget class="QStackedWidget" name="stackedWidget_3">
                   <property name="currentIndex">
-                   <number>0</number>
+                   <number>2</number>
                   </property>
-                  <widget class="QWidget" name="profile_page_teacher">
+                  <widget class="QWidget" name="t_profile_page">
                    <layout class="QGridLayout" name="gridLayout_17">
                     <property name="leftMargin">
                      <number>0</number>
@@ -3027,7 +3027,7 @@ border-width: 0px;</string>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_15">
                        <item>
-                        <widget class="QTableWidget" name="profile_table_teacher">
+                        <widget class="QTableWidget" name="t_profile_table">
                          <property name="styleSheet">
                           <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                          </property>
@@ -3056,7 +3056,7 @@ border-width: 0px;</string>
                           <bool>true</bool>
                          </attribute>
                          <attribute name="verticalHeaderVisible">
-                          <bool>true</bool>
+                          <bool>false</bool>
                          </attribute>
                          <attribute name="verticalHeaderMinimumSectionSize">
                           <number>40</number>
@@ -3164,7 +3164,7 @@ border-width: 0px;</string>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="grades_page_teacher">
+                  <widget class="QWidget" name="t_grades_page">
                    <layout class="QGridLayout" name="gridLayout_19">
                     <property name="leftMargin">
                      <number>0</number>
@@ -3195,7 +3195,7 @@ border-width: 0px;</string>
                          <item>
                           <layout class="QHBoxLayout" name="horizontalLayout_6">
                            <item>
-                            <widget class="QComboBox" name="class_dropdown">
+                            <widget class="QComboBox" name="t_grades_class_drop">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3252,7 +3252,7 @@ border-width: 0px;</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLabel" name="no_grades_label">
+                            <widget class="QLabel" name="t_grades_nogrades_label">
                              <property name="minimumSize">
                               <size>
                                <width>300</width>
@@ -3287,7 +3287,7 @@ border-width: 0px;</string>
                           </layout>
                          </item>
                          <item>
-                          <widget class="QTableWidget" name="all_grades_table">
+                          <widget class="QTableWidget" name="t_grades_allgrades_table">
                            <property name="styleSheet">
                             <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                            </property>
@@ -3369,7 +3369,7 @@ border-width: 0px;</string>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="add_grade_page">
+                  <widget class="QWidget" name="t_addgrade_page">
                    <widget class="QFrame" name="frame_10">
                     <property name="geometry">
                      <rect>
@@ -3417,7 +3417,7 @@ border-width: 0px;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="t_agrade_class_drop">
+                          <widget class="QComboBox" name="t_addgrade_class_drop">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3467,7 +3467,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="t_agrade_firstname_drop">
+                          <widget class="QComboBox" name="t_addgrade_firstname_drop">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
@@ -3517,7 +3517,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="t_agrade_lastname_drop">
+                          <widget class="QComboBox" name="t_addgrade_lastname_drop">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
@@ -3567,7 +3567,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="t_agrade_testno_field">
+                          <widget class="QLineEdit" name="t_addgrade_testno_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3628,7 +3628,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QDateEdit" name="t_agrade_testdate_field">
+                          <widget class="QDateEdit" name="t_addgrade_testdate_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3719,7 +3719,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="t_agrade_grade_field">
+                          <widget class="QLineEdit" name="t_addgrade_grade_field">
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -3752,7 +3752,7 @@ border: 1px solid #808080;</string>
                         </layout>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="t_agrade_submit_btn">
+                        <widget class="QPushButton" name="t_addgrade_submit_btn">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
