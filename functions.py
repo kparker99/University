@@ -9,7 +9,8 @@ from PyQt5 import QtGui as qtg
 from design import Ui_MainWindow
 import sql_functions as sql
 
-# test
+def func ():
+    pass
 
 class GUI_Window(qtw.QMainWindow):
     def __init__(self, *args, **kwargs):
