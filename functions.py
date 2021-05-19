@@ -9,6 +9,9 @@ from PyQt5 import QtGui as qtg
 from design import Ui_MainWindow
 import sql_functions as sql
 
+############      NAMING STANDARDS      ############
+# Pages / Items: < l | n | t | s >_< page >_< label >_< field | btn | drop | table | label >  ex. n_firstname_field, s_classgrades_class_drop
+# Functions: < _ | t | s >_< page >_< function >  ex. _logout, s_profile_profile_data
 
 class GUI_Window(qtw.QMainWindow):
     def __init__(self, *args, **kwargs):
@@ -24,6 +27,7 @@ class GUI_Window(qtw.QMainWindow):
         rect.moveCenter(cp)
         self.move(rect.topLeft())
         self.ui.stackedWidget.setCurrentIndex(0)
+
 
 
     # BUTTON FUNCTIONALITY BELOW
@@ -61,6 +65,7 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.t_classes_btn.clicked.connect(self.t_grades_grade_data)
         self.ui.t_logout_btn.clicked.connect(self._logout)
         self.ui.t_grades_class_drop.activated.connect(self.t_grades_grade_data)
+        self.ui.t_addgrade_class_drop.activated.connect(self.t_addgrade)
         self.ui.t_grades_addgrade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
     # END BUTTONS
 
@@ -126,7 +131,6 @@ class GUI_Window(qtw.QMainWindow):
             elif role == 2:
                 self.ui.stackedWidget.setCurrentIndex(3)
                 self.ui.stackedWidget_3.setCurrentIndex(0)
-                print('hi')
                 self.ui.t_userwelcome_field.setText("{} {}".format(first, last))
                 self.t_grades_teacher_classes(username)
                 self.t_profile_profile_data()
@@ -315,7 +319,7 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.t_profile_table.resizeColumnsToContents()
 
     def t_grades_teacher_classes(self, username):
-        '''gets a list of classes teacher is instructor of upon login'''
+        '''gets a list of classes teacher is instructor of upon login and adds to drop downs'''
         class_list = []
         table_info = sql.get_info_from_db("SELECT c.class_id \
                                           FROM university.class c \
@@ -324,6 +328,7 @@ class GUI_Window(qtw.QMainWindow):
         for tuple in table_info:
             class_list = class_list + list(tuple)
         self.ui.t_grades_class_drop.addItems(class_list)
+        self.ui.t_addgrade_class_drop.addItems(class_list)
         return class_list
 
     def t_grades_grade_data(self):
@@ -337,6 +342,19 @@ class GUI_Window(qtw.QMainWindow):
         for row_number, row_data in enumerate(info):
             for column_number, data in enumerate(row_data):
                 self.ui.t_grades_allgrades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
+
+    def t_addgrade(self):
+        '''Adds new grade for student of a specific class'''
+        course = self.ui.t_addgrade_class_drop.currentText()
+        print(course)
+        info = sql.get_info_from_db(
+                                    "SELECT user_id, test_number, test_date, grade \
+                                    FROM university.grades \
+                                    WHERE class_id=%s", (course))
+        print(info)
+        if info == ():
+            self._message("No Students Exist", "No students currently enrolled in this class")
+
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
