@@ -346,15 +346,17 @@ class GUI_Window(qtw.QMainWindow):
     def t_addgrade(self):
         '''Adds new grade for student of a specific class'''
         course = self.ui.t_addgrade_class_drop.currentText()
-        print(course)
         info = sql.get_info_from_db(
                                     "SELECT user_id, test_number, test_date, grade \
                                     FROM university.grades \
                                     WHERE class_id=%s", (course))
-        print(info)
+        name = []
         if info == ():
             self._message("No Students Exist", "No students currently enrolled in this class")
-
+        for tuple in info:
+            if tuple[0] not in name:
+                name.append(tuple[0])
+        self.ui.t_addgrade_name_drop.addItems(name)
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
