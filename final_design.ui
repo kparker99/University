@@ -3467,7 +3467,7 @@ border: 1px solid #808080;</string>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="t_addgrade_firstname_drop">
+                          <widget class="QComboBox" name="t_addgrade_name_drop">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>

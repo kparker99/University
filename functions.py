@@ -65,8 +65,10 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.t_classes_btn.clicked.connect(self.t_grades_grade_data)
         self.ui.t_logout_btn.clicked.connect(self._logout)
         self.ui.t_grades_class_drop.activated.connect(self.t_grades_grade_data)
-        self.ui.t_addgrade_class_drop.activated.connect(self.t_addgrade)
+        self.ui.t_addgrade_class_drop.activated.connect(self.t_get_students)
         self.ui.t_grades_addgrade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
+        self.ui.t_grades_addgrade.clicked.connect(self.t_get_students)
+        self.ui.t_addgrade_submit_btn.clicked.connect(self.t_addgrade)
     # END BUTTONS
 
 
@@ -343,8 +345,9 @@ class GUI_Window(qtw.QMainWindow):
             for column_number, data in enumerate(row_data):
                 self.ui.t_grades_allgrades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
 
-    def t_addgrade(self):
-        '''Adds new grade for student of a specific class'''
+    def t_get_students(self):
+        '''Fetches student names for the selected class'''
+        self.ui.t_addgrade_name_drop.clear()
         course = self.ui.t_addgrade_class_drop.currentText()
         info = sql.get_info_from_db(
                                     "SELECT user_id, test_number, test_date, grade \
@@ -357,6 +360,25 @@ class GUI_Window(qtw.QMainWindow):
             if tuple[0] not in name:
                 name.append(tuple[0])
         self.ui.t_addgrade_name_drop.addItems(name)
+
+    def t_addgrade(self):
+        '''Adds student test grade to class db'''
+        course = self.ui.t_addgrade_class_drop.currentText()
+        name = self.ui.t_addgrade_name_drop.currentText()
+        test = self.ui.t_addgrade_testno_field.text()
+        test = int(test)
+        date = self.ui.t_addgrade_testdate_field.text()
+        grade = self.ui.t_addgrade_grade_field.text()
+        query = sql.get_info_from_db(
+                                    "SELECT class_id, user_id, test_number \
+                                    FROM university.grades \
+                                    WHERE class_id=%s AND user_id=%s AND test_number=%s", (course, name, test))
+        if query == ():
+            sql.enter_into_db("INSERT INTO university.grades (class_id, user_id, test_number, test_date, grade) VALUES (%s,%s,%s,%s,%s)",
+                          (course, name, test, date, grade))
+            self._message("Grade Added", "Test grade added")
+        else:
+            self._message("Error", "Student already has grade entered for test number")
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
