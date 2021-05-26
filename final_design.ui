@@ -36,7 +36,7 @@
        <string notr="true">background-color: rgb(57, 24, 71);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -1807,7 +1807,7 @@ border-width: 0px;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>3</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
@@ -2549,7 +2549,7 @@ border-width: 0px;</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">border: 1px solid #808080;
-background-color: #white;</string>
+background-color: #fff;</string>
                              </property>
                             </widget>
                            </item>
@@ -2998,7 +2998,7 @@ border-width: 0px;</string>
                 <item>
                  <widget class="QStackedWidget" name="stackedWidget_3">
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="t_profile_page">
                    <layout class="QGridLayout" name="gridLayout_17">
@@ -3189,177 +3189,185 @@ border-width: 0px;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QGridLayout" name="gridLayout_18">
-                       <item row="0" column="0">
-                        <layout class="QVBoxLayout" name="verticalLayout_14">
+                      <layout class="QVBoxLayout" name="verticalLayout_14">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_6">
                          <item>
-                          <layout class="QHBoxLayout" name="horizontalLayout_6">
-                           <item>
-                            <widget class="QComboBox" name="t_grades_class_drop">
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="minimumSize">
-                              <size>
-                               <width>300</width>
-                               <height>30</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>300</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">border: 1px solid #808080;</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                            <widget class="QPushButton" name="t_grades_addgrade">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>30</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>16</pointsize>
-                               <weight>75</weight>
-                               <bold>true</bold>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">text-align: center;
-padding-bottom: 3px;
-border-style: outset;
-border-width: 0px;</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="t_grades_nogrades_label">
-                             <property name="minimumSize">
-                              <size>
-                               <width>300</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>12</pointsize>
-                               <weight>75</weight>
-                               <bold>true</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string/>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <spacer name="horizontalSpacer">
-                             <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
-                             </property>
-                             <property name="sizeHint" stdset="0">
-                              <size>
-                               <width>40</width>
-                               <height>20</height>
-                              </size>
-                             </property>
-                            </spacer>
-                           </item>
-                          </layout>
+                          <widget class="QComboBox" name="t_grades_class_drop">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>300</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>300</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border: 1px solid #808080;</string>
+                           </property>
+                          </widget>
                          </item>
                          <item>
-                          <widget class="QTableWidget" name="t_grades_allgrades_table">
+                          <widget class="QLabel" name="t_grades_nogrades_label">
+                           <property name="minimumSize">
+                            <size>
+                             <width>300</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <spacer name="horizontalSpacer">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>40</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QTableWidget" name="t_grades_allgrades_table">
+                         <property name="styleSheet">
+                          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::NoFrame</enum>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
+                         </property>
+                         <property name="showGrid">
+                          <bool>false</bool>
+                         </property>
+                         <property name="rowCount">
+                          <number>10</number>
+                         </property>
+                         <attribute name="verticalHeaderVisible">
+                          <bool>false</bool>
+                         </attribute>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <row/>
+                         <column>
+                          <property name="text">
+                           <string>Student</string>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Test Number</string>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Test Date</string>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Score</string>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_10">
+                         <item>
+                          <widget class="QPushButton" name="t_grades_addgrade_btn">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>40</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                            <string notr="true">background-color: rgb(180, 145, 76);
+font: 12pt &quot;Montserrat SemiBold&quot;;
+color: white;
+border-style: outset;
+border-width: 0px;</string>
                            </property>
-                           <property name="frameShape">
-                            <enum>QFrame::NoFrame</enum>
+                           <property name="text">
+                            <string>ADD GRADE</string>
                            </property>
-                           <property name="editTriggers">
-                            <set>QAbstractItemView::NoEditTriggers</set>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="t_grades_editgrade_btn">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>40</height>
+                            </size>
                            </property>
-                           <property name="showGrid">
-                            <bool>false</bool>
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgb(180, 145, 76);
+font: 12pt &quot;Montserrat SemiBold&quot;;
+color: white;
+border-style: outset;
+border-width: 0px;</string>
                            </property>
-                           <property name="rowCount">
-                            <number>10</number>
+                           <property name="text">
+                            <string>EDIT GRADE</string>
                            </property>
-                           <attribute name="verticalHeaderVisible">
-                            <bool>false</bool>
-                           </attribute>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <row/>
-                           <column>
-                            <property name="text">
-                             <string>Student</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                           </column>
-                           <column>
-                            <property name="text">
-                             <string>Test Number</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                           </column>
-                           <column>
-                            <property name="text">
-                             <string>Test Date</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                           </column>
-                           <column>
-                            <property name="text">
-                             <string>Score</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                           </column>
                           </widget>
                          </item>
                         </layout>
@@ -3724,6 +3732,261 @@ border-width: 0px;</string>
                          </property>
                          <property name="text">
                           <string>SUBMIT GRADE</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="t_editgrade_page">
+                   <widget class="QFrame" name="frame_16">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>435</width>
+                      <height>261</height>
+                     </rect>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_22">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_17">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_17">
+                         <item>
+                          <widget class="QLabel" name="label_20">
+                           <property name="minimumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Class</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="t_editgrade_class_drop">
+                           <property name="minimumSize">
+                            <size>
+                             <width>250</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>250</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">
+border: 1px solid #808080;</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_18">
+                         <item>
+                          <widget class="QLabel" name="label_15">
+                           <property name="minimumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Name</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="t_editgrade_name_drop">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">
+border: 1px solid #808080;</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_19">
+                         <item>
+                          <widget class="QLabel" name="label_21">
+                           <property name="minimumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Test Number</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="t_editgrade_testno_drop">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">
+border: 1px solid #808080;</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_21">
+                         <item>
+                          <widget class="QLabel" name="label_23">
+                           <property name="minimumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Grade</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="t_editgrade_grade_field">
+                           <property name="minimumSize">
+                            <size>
+                             <width>250</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>250</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>IBeamCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">
+border: 1px solid #808080;</string>
+                           </property>
+                           <property name="maxLength">
+                            <number>50</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="t_editgrade_submit_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(180, 145, 76);
+font: 12pt &quot;Montserrat SemiBold&quot;;
+color: white;
+border-style: outset;
+border-width: 0px;</string>
+                         </property>
+                         <property name="text">
+                          <string>SUBMIT NEW GRADE</string>
                          </property>
                         </widget>
                        </item>

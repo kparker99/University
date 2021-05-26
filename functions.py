@@ -64,11 +64,19 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.t_classes_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
         self.ui.t_classes_btn.clicked.connect(self.t_grades_grade_data)
         self.ui.t_logout_btn.clicked.connect(self._logout)
+        
         self.ui.t_grades_class_drop.activated.connect(self.t_grades_grade_data)
-        self.ui.t_addgrade_class_drop.activated.connect(self.t_get_students)
-        self.ui.t_grades_addgrade.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
-        self.ui.t_grades_addgrade.clicked.connect(self.t_get_students)
+
+        self.ui.t_addgrade_class_drop.activated.connect(self.t_get_students_add)
+        self.ui.t_grades_addgrade_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
+        self.ui.t_grades_addgrade_btn.clicked.connect(self.t_get_students_add)
         self.ui.t_addgrade_submit_btn.clicked.connect(self.t_addgrade)
+
+        self.ui.t_editgrade_class_drop.activated.connect(self.t_get_students_edit)
+        self.ui.t_editgrade_name_drop.activated.connect(self.t_get_student_names_edit)
+        self.ui.t_grades_editgrade_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(3))
+        self.ui.t_grades_editgrade_btn.clicked.connect(self.t_get_students_edit)
+        self.ui.t_editgrade_submit_btn.clicked.connect(self.t_editgrade) 
     # END BUTTONS
 
 
@@ -330,7 +338,8 @@ class GUI_Window(qtw.QMainWindow):
         for tuple in table_info:
             class_list = class_list + list(tuple)
         self.ui.t_grades_class_drop.addItems(class_list)
-        self.ui.t_addgrade_class_drop.addItems(class_list)
+        self.ui.t_addgrade_class_drop.addItems(class_list)  #Populates addgrade_class_drop combo box with class list
+        self.ui.t_editgrade_class_drop.addItems(class_list) #Populates editgrade_class_drop combo box with class list
         return class_list
 
     def t_grades_grade_data(self):
@@ -345,12 +354,12 @@ class GUI_Window(qtw.QMainWindow):
             for column_number, data in enumerate(row_data):
                 self.ui.t_grades_allgrades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
 
-    def t_get_students(self):
+    def t_get_students_add(self):
         '''Fetches student names for the selected class'''
         self.ui.t_addgrade_name_drop.clear()
         course = self.ui.t_addgrade_class_drop.currentText()
         info = sql.get_info_from_db(
-                                    "SELECT user_id, test_number, test_date, grade \
+                                    "SELECT user_id, test_number \
                                     FROM university.grades \
                                     WHERE class_id=%s", (course))
         name = []
@@ -379,6 +388,65 @@ class GUI_Window(qtw.QMainWindow):
             self._message("Grade Added", "Test grade added")
         else:
             self._message("Error", "Student already has grade entered for test number")
+
+    def t_get_students_edit(self):
+        '''Fetches test information for selected class'''
+        self.ui.t_editgrade_name_drop.clear()
+        self.ui.t_editgrade_testno_drop.clear()
+        course = self.ui.t_editgrade_class_drop.currentText()
+        info = sql.get_info_from_db(
+                                    "SELECT user_id, test_number \
+                                    FROM university.grades \
+                                    WHERE class_id=%s", (course))
+        name = []
+        if info == ():
+            self._message("No Students Exist", "No students currently enrolled in this class")
+        for tuple in info:
+            if tuple[0] not in name:
+                name.append(tuple[0])
+        self.ui.t_editgrade_name_drop.addItems(name)
+        name = self.ui.t_editgrade_name_drop.currentText()
+        number = []
+        for tuple in info:
+            if tuple[0] == name:
+                n = str(tuple[1])
+                number.append(n)
+        self.ui.t_editgrade_testno_drop.addItems(number)
+
+    def t_get_student_names_edit(self):
+        '''Fetches test numbers for selected student'''
+        self.ui.t_editgrade_testno_drop.clear()
+        course = self.ui.t_editgrade_class_drop.currentText()
+        info = sql.get_info_from_db(
+                                    "SELECT user_id, test_number \
+                                    FROM university.grades \
+                                    WHERE class_id=%s", (course))
+        name = self.ui.t_editgrade_name_drop.currentText()
+        number = []
+        for tuple in info:
+            if tuple[0] == name:
+                n = str(tuple[1])
+                number.append(n)
+        self.ui.t_editgrade_testno_drop.addItems(number)
+
+#TODO: Complete t_editgrade function
+    def t_editgrade(self):
+        '''Edits existing student test grade to class db'''
+        course = self.ui.t_editgrade_class_drop.currentText()
+        name = self.ui.t_editgrade_name_drop.currentText()
+        test = self.ui.t_editgrade_testno_drop.currentText()
+        test = int(test)
+        grade = self.ui.t_editgrade_grade_field.text()
+        query = sql.get_info_from_db(
+                                    "SELECT class_id, user_id, test_number \
+                                    FROM university.grades \
+                                    WHERE class_id=%s AND user_id=%s AND test_number=%s", (course, name, test))
+        if query != ():
+            sql.enter_into_db("UPDATE university.grades SET grade=%s \
+                               WHERE class_id=%s AND user_id=%s AND test_number=%s", (grade, course, name, test))
+            self._message("Grade Added", "Test grade updated")
+        else:
+            self._message("No Test", "Cannot update a test that doesn't exist. Add grade first")
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
