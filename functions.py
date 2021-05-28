@@ -429,7 +429,6 @@ class GUI_Window(qtw.QMainWindow):
                 number.append(n)
         self.ui.t_editgrade_testno_drop.addItems(number)
 
-#TODO: Complete t_editgrade function
     def t_editgrade(self):
         '''Edits existing student test grade to class db'''
         course = self.ui.t_editgrade_class_drop.currentText()
