@@ -64,14 +64,11 @@ class GUI_Window(qtw.QMainWindow):
         self.ui.t_classes_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
         self.ui.t_classes_btn.clicked.connect(self.t_grades_grade_data)
         self.ui.t_logout_btn.clicked.connect(self._logout)
-        
         self.ui.t_grades_class_drop.activated.connect(self.t_grades_grade_data)
-
         self.ui.t_addgrade_class_drop.activated.connect(self.t_get_students_add)
         self.ui.t_grades_addgrade_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(2))
         self.ui.t_grades_addgrade_btn.clicked.connect(self.t_get_students_add)
         self.ui.t_addgrade_submit_btn.clicked.connect(self.t_addgrade)
-
         self.ui.t_editgrade_class_drop.activated.connect(self.t_get_students_edit)
         self.ui.t_editgrade_name_drop.activated.connect(self.t_get_student_names_edit)
         self.ui.t_grades_editgrade_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(3))
