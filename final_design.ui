@@ -36,7 +36,7 @@
        <string notr="true">background-color: rgb(57, 24, 71);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -1434,7 +1434,40 @@ border: 1px solid #808080;</string>
                 <property name="spacing">
                  <number>0</number>
                 </property>
-                <item alignment="Qt::AlignHCenter">
+                <item>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(180, 166, 140);
+font: 12pt &quot;Montserrat SemiBold&quot;;
+color: white;
+border-style: outset;
+border-width: 0px;</string>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
                  <widget class="QPushButton" name="n_createaccount_btn">
                   <property name="enabled">
                    <bool>true</bool>
