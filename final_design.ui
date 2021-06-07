@@ -2109,7 +2109,8 @@ color: #ffffff;</string>
                     <string notr="true">background-color: #F79E02;
 color: #ffffff;
 border-style: none;
-border: 3px solid #F79E02;</string>
+border: 3px solid #F79E02;
+outline: none;</string>
                    </property>
                    <property name="text">
                     <string>PROFILE</string>
@@ -2150,7 +2151,7 @@ border: 3px solid #F79E02;</string>
 color: #ffffff;
 border-style: none;
 border: 3px solid #F79E02;
-</string>
+outline: none;</string>
                    </property>
                    <property name="text">
                     <string>CLASSES</string>
@@ -2191,7 +2192,7 @@ border: 3px solid #F79E02;
 color: #ffffff;
 border-style: none;
 border: 3px solid #F79E02;
-</string>
+outline: none;</string>
                    </property>
                    <property name="text">
                     <string>GRADES</string>
@@ -2232,7 +2233,7 @@ border: 3px solid #F79E02;
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>2</number>
                   </property>
                   <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
@@ -2676,18 +2677,36 @@ border-bottom: 5px solid #F79E02;</string>
                        </property>
                        <item>
                         <widget class="QLabel" name="s_courseenroll_coursename_field">
+                         <property name="minimumSize">
+                          <size>
+                           <width>1150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>1150</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
                          <property name="font">
                           <font>
-                           <pointsize>14</pointsize>
+                           <family>Roboto Slab SemiBold</family>
+                           <pointsize>32</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">color: rgb(57, 24, 71);</string>
+                          <string notr="true">text-transform: uppercase;
+color: #F79E02;
+border-bottom: 5px solid #F79E02;</string>
                          </property>
                          <property name="text">
                           <string>Course Name</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -2695,15 +2714,22 @@ border-bottom: 5px solid #F79E02;</string>
                         <layout class="QHBoxLayout" name="horizontalLayout_5">
                          <item>
                           <widget class="QLabel" name="label_2">
+                           <property name="minimumSize">
+                            <size>
+                             <width>140</width>
+                             <height>0</height>
+                            </size>
+                           </property>
                            <property name="maximumSize">
                             <size>
-                             <width>120</width>
+                             <width>140</width>
                              <height>16777215</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <family>Roboto Slab Medium</family>
+                             <pointsize>12</pointsize>
                              <weight>75</weight>
                              <bold>true</bold>
                             </font>
@@ -2720,6 +2746,7 @@ border-bottom: 5px solid #F79E02;</string>
                           <widget class="QLabel" name="s_courseenroll_credits_field">
                            <property name="font">
                             <font>
+                             <family>Montserrat</family>
                              <pointsize>10</pointsize>
                             </font>
                            </property>
@@ -2737,7 +2764,8 @@ border-bottom: 5px solid #F79E02;</string>
                         <widget class="QLabel" name="label_14">
                          <property name="font">
                           <font>
-                           <pointsize>10</pointsize>
+                           <family>Roboto Slab Medium</family>
+                           <pointsize>12</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
                           </font>
@@ -2760,7 +2788,8 @@ border-bottom: 5px solid #F79E02;</string>
                          </property>
                          <property name="font">
                           <font>
-                           <pointsize>10</pointsize>
+                           <family>Montserrat</family>
+                           <pointsize>14</pointsize>
                           </font>
                          </property>
                          <property name="styleSheet">
@@ -2778,12 +2807,19 @@ border-bottom: 5px solid #F79E02;</string>
                         <widget class="QTableWidget" name="s_courseenroll_classes_table">
                          <property name="font">
                           <font>
-                           <family>MS Shell Dlg 2</family>
-                           <pointsize>10</pointsize>
+                           <family>Montserrat SemiBold</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">color: rgb(57, 24, 71);</string>
+                          <string notr="true">QHeaderView::section {
+	font: 16pt 'Monsterrat Black';
+	color: #0074E1;
+	text-transform: uppercase;
+	height: 50px;
+}</string>
                          </property>
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
@@ -2800,6 +2836,12 @@ border-bottom: 5px solid #F79E02;</string>
                          <property name="rowCount">
                           <number>2</number>
                          </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>225</number>
+                         </attribute>
+                         <attribute name="horizontalHeaderStretchLastSection">
+                          <bool>true</bool>
+                         </attribute>
                          <attribute name="verticalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
@@ -2884,13 +2926,20 @@ border-bottom: 5px solid #F79E02;</string>
                              <height>40</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Roboto Slab</family>
+                             <pointsize>16</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">font: 14pt &quot;Nunito Black&quot;;
-background-color: #F79E02;
+                            <string notr="true">background-color: #F79E02;
 color: #ffffff;
 border-style: none;
 border: 3px solid #F79E02;
-border-radius: 20px;</string>
+outline: none;</string>
                            </property>
                            <property name="text">
                             <string>ENROLL</string>
@@ -2917,13 +2966,20 @@ border-radius: 20px;</string>
                              <height>40</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Roboto Slab</family>
+                             <pointsize>16</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">font: 14pt &quot;Nunito Black&quot;;
-background-color: #F79E02;
+                            <string notr="true">background-color: #F79E02;
 color: #ffffff;
 border-style: none;
 border: 3px solid #F79E02;
-border-radius: 20px;</string>
+outline: none;</string>
                            </property>
                            <property name="text">
                             <string>CLOSE</string>
@@ -3103,350 +3159,14 @@ padding-left: 1px;</string>
                          </item>
                          <item>
                           <widget class="QTableWidget" name="s_classgrades_grades_table">
-                           <property name="palette">
-                            <palette>
-                             <active>
-                              <colorrole role="WindowText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Button">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Text">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="ButtonText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Base">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Window">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="PlaceholderText">
-                               <brush brushstyle="NoBrush">
-                                <color alpha="128">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                             </active>
-                             <inactive>
-                              <colorrole role="WindowText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Button">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Text">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="ButtonText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Base">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Window">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="PlaceholderText">
-                               <brush brushstyle="NoBrush">
-                                <color alpha="128">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                             </inactive>
-                             <disabled>
-                              <colorrole role="WindowText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Button">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Text">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="ButtonText">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Base">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="Window">
-                               <brush brushstyle="SolidPattern">
-                                <color alpha="255">
-                                 <red>255</red>
-                                 <green>255</green>
-                                 <blue>255</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                              <colorrole role="PlaceholderText">
-                               <brush brushstyle="NoBrush">
-                                <color alpha="128">
-                                 <red>0</red>
-                                 <green>0</green>
-                                 <blue>0</blue>
-                                </color>
-                               </brush>
-                              </colorrole>
-                             </disabled>
-                            </palette>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Nunito</family>
-                             <pointsize>12</pointsize>
-                             <weight>50</weight>
-                             <italic>false</italic>
-                             <bold>false</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QTableWidget {
-	background: #ffffff;
-	color: #000000;		
-};</string>
-                           </property>
-                           <property name="frameShape">
-                            <enum>QFrame::NoFrame</enum>
-                           </property>
-                           <property name="sizeAdjustPolicy">
-                            <enum>QAbstractScrollArea::AdjustToContents</enum>
-                           </property>
-                           <property name="editTriggers">
-                            <set>QAbstractItemView::NoEditTriggers</set>
-                           </property>
-                           <property name="showGrid">
-                            <bool>false</bool>
-                           </property>
-                           <property name="gridStyle">
-                            <enum>Qt::SolidLine</enum>
-                           </property>
-                           <property name="rowCount">
-                            <number>2</number>
-                           </property>
-                           <attribute name="horizontalHeaderVisible">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="horizontalHeaderCascadingSectionResizes">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="horizontalHeaderMinimumSectionSize">
-                            <number>50</number>
-                           </attribute>
-                           <attribute name="horizontalHeaderDefaultSectionSize">
-                            <number>200</number>
-                           </attribute>
-                           <attribute name="horizontalHeaderHighlightSections">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="horizontalHeaderStretchLastSection">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="verticalHeaderVisible">
-                            <bool>false</bool>
-                           </attribute>
-                           <attribute name="verticalHeaderStretchLastSection">
-                            <bool>false</bool>
-                           </attribute>
-                           <row>
-                            <property name="text">
-                             <string>New Row</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Nunito</family>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                            <property name="background">
-                             <color>
-                              <red>255</red>
-                              <green>255</green>
-                              <blue>255</blue>
-                             </color>
-                            </property>
-                           </row>
-                           <row>
-                            <property name="text">
-                             <string>New Row</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Nunito</family>
-                              <pointsize>12</pointsize>
-                             </font>
-                            </property>
-                           </row>
                            <column>
                             <property name="text">
-                             <string>TEST DATE</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Nunito Black</family>
-                              <pointsize>12</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="background">
-                             <color>
-                              <red>255</red>
-                              <green>255</green>
-                              <blue>255</blue>
-                             </color>
-                            </property>
-                            <property name="foreground">
-                             <brush brushstyle="NoBrush">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
+                             <string>Test</string>
                             </property>
                            </column>
                            <column>
                             <property name="text">
-                             <string>GRADE</string>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Nunito Black</family>
-                              <pointsize>12</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="background">
-                             <color>
-                              <red>255</red>
-                              <green>255</green>
-                              <blue>255</blue>
-                             </color>
-                            </property>
-                            <property name="foreground">
-                             <brush brushstyle="NoBrush">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
+                             <string>Date</string>
                             </property>
                            </column>
                           </widget>
