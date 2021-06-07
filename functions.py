@@ -182,12 +182,10 @@ class GUI_Window(qtw.QMainWindow):
            self.ui.n_phone_field.text() and \
            self.ui.n_enterpassword_field.text() and \
            self.ui.n_confirmpassword_field.text():
-                self.ui.n_createaccount_btn.setStyleSheet("background-color: rgb(180, 145, 76);\n"
-                                                            "font: 12pt \"Montserrat SemiBold\";\n"
-                                                            "color: white;\n"
-                                                            "border-style: outset;\n"
-                                                            "border-width: 0px;\n"
-                                                            )
+                self.ui.n_createaccount_btn.setStyleSheet("background-color: #F79E02;\n"
+                                                          "color: #ffffff;\n"
+                                                          "border: 3px solid #F79E02;\n"
+                                                          )
         else:
             pass
 
@@ -309,7 +307,7 @@ class GUI_Window(qtw.QMainWindow):
             for x in range(len(info)):
                 lis.append(info[x][1])
                 avg = sum(lis)/len(lis)
-            self.ui.s_classgrades_totalgrade_field.setText("Class Grade: {:.2f}%".format(avg))
+            self.ui.s_classgrades_totalgrade_field.setText("CLASS GRADE: {:.2f}%".format(avg))
             for row_number, row_data in enumerate(info):
                 for column_number, data in enumerate(row_data):
                     self.ui.s_classgrades_grades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
