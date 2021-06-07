@@ -22,7 +22,7 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <layout class="QGridLayout" name="gridLayout_15">
+   <layout class="QVBoxLayout" name="verticalLayout_18">
     <property name="leftMargin">
      <number>0</number>
     </property>
@@ -35,7 +35,7 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <item row="0" column="0">
+    <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -53,7 +53,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -2233,7 +2233,7 @@ outline: none;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
@@ -2728,7 +2728,7 @@ border-bottom: 5px solid #F79E02;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Roboto Slab Medium</family>
+                             <family>Montserrat ExtraBold</family>
                              <pointsize>12</pointsize>
                              <weight>75</weight>
                              <bold>true</bold>
@@ -2764,7 +2764,7 @@ border-bottom: 5px solid #F79E02;</string>
                         <widget class="QLabel" name="label_14">
                          <property name="font">
                           <font>
-                           <family>Roboto Slab Medium</family>
+                           <family>Montserrat ExtraBold</family>
                            <pointsize>12</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
@@ -3048,24 +3048,14 @@ outline: none;</string>
                              </property>
                              <property name="font">
                               <font>
-                               <family>Nunito Black</family>
+                               <family>Montserrat SemiBold</family>
                                <pointsize>12</pointsize>
                               </font>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">QComboBox {
-background-color: #1B9CE5;
-color: #ffffff;
-padding: 0px 0px 0px 2px;
-}
-
-QComboBox::drop-down {
-	color: red;
-}
-
-QComboBox::down-arrow {
-	color: red;
-}</string>
+                              <string notr="true">background-color: #1B9CE5;
+border: none;
+color: #ffffff;</string>
                              </property>
                             </widget>
                            </item>
@@ -3104,34 +3094,34 @@ QComboBox::down-arrow {
                           <widget class="QLabel" name="s_classgrades_totalgrade_field">
                            <property name="minimumSize">
                             <size>
-                             <width>300</width>
-                             <height>30</height>
+                             <width>650</width>
+                             <height>60</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>300</width>
-                             <height>30</height>
+                             <width>650</width>
+                             <height>60</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Nunito Black</family>
-                             <pointsize>12</pointsize>
+                             <family>Roboto Slab SemiBold</family>
+                             <pointsize>32</pointsize>
                              <weight>75</weight>
                              <bold>true</bold>
                             </font>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: #6CDAEE;
-color: #000000;
-padding-left: 1px;</string>
+                            <string notr="true">text-transform: uppercase;
+color: #F79E02;
+border-bottom: 5px solid #F79E02;</string>
                            </property>
                            <property name="text">
                             <string/>
                            </property>
                            <property name="alignment">
-                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                            <set>Qt::AlignCenter</set>
                            </property>
                            <property name="margin">
                             <number>0</number>
@@ -3159,6 +3149,40 @@ padding-left: 1px;</string>
                          </item>
                          <item>
                           <widget class="QTableWidget" name="s_classgrades_grades_table">
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QHeaderView::section {
+	font: 16pt 'Monsterrat Black';
+	color: #0074E1;
+	text-transform: uppercase;
+	height: 50px;
+	outline: none;
+}</string>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::NoFrame</enum>
+                           </property>
+                           <property name="showGrid">
+                            <bool>false</bool>
+                           </property>
+                           <property name="cornerButtonEnabled">
+                            <bool>false</bool>
+                           </property>
+                           <attribute name="verticalHeaderVisible">
+                            <bool>false</bool>
+                           </attribute>
+                           <row>
+                            <property name="text">
+                             <string>New Row</string>
+                            </property>
+                           </row>
                            <column>
                             <property name="text">
                              <string>Test</string>
@@ -3191,7 +3215,22 @@ padding-left: 1px;</string>
        </layout>
       </widget>
       <widget class="QWidget" name="teacher_page">
+       <property name="styleSheet">
+        <string notr="true">background-color: #ffffff;</string>
+       </property>
        <layout class="QGridLayout" name="gridLayout_6">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item row="0" column="0">
          <widget class="QFrame" name="frame_11">
           <property name="frameShape">
@@ -3202,19 +3241,19 @@ padding-left: 1px;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
            <property name="spacing">
-            <number>0</number>
+            <number>20</number>
            </property>
            <property name="leftMargin">
-            <number>0</number>
+            <number>20</number>
            </property>
            <property name="topMargin">
-            <number>0</number>
+            <number>20</number>
            </property>
            <property name="rightMargin">
-            <number>0</number>
+            <number>20</number>
            </property>
            <property name="bottomMargin">
-            <number>0</number>
+            <number>20</number>
            </property>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -3222,46 +3261,21 @@ padding-left: 1px;</string>
               <number>0</number>
              </property>
              <item>
-              <widget class="QFrame" name="top_bar_4">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(162, 162, 162);</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QFrame" name="lower_bar_2">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>40</height>
+                 <height>60</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
-                 <height>40</height>
+                 <height>60</height>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(230, 230, 230);</string>
+                <string notr="true">background-color: #0074E1;</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -3301,13 +3315,14 @@ padding-left: 1px;</string>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Roboto Slab</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color: black;</string>
+                   <string notr="true">color: #ffffff;</string>
                   </property>
                   <property name="text">
                    <string>&lt;user_welcome&gt;</string>
@@ -3318,20 +3333,28 @@ padding-left: 1px;</string>
                  <widget class="QPushButton" name="t_logout_btn">
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
-                    <height>40</height>
+                    <width>75</width>
+                    <height>60</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>75</width>
+                    <width>100</width>
                     <height>16777215</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Roboto Slab</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">border-style: outset;
 border-width: 0px;
-</string>
+color: #ffffff;</string>
                   </property>
                   <property name="text">
                    <string>| LOGOUT</string>
@@ -3369,7 +3392,7 @@ border-width: 0px;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
+                <string notr="true"/>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -3380,7 +3403,7 @@ border-width: 0px;
                <widget class="QWidget" name="layoutWidget_2">
                 <property name="geometry">
                  <rect>
-                  <x>10</x>
+                  <x>0</x>
                   <y>10</y>
                   <width>131</width>
                   <height>102</height>
@@ -3410,12 +3433,20 @@ border-width: 0px;
                      <height>40</height>
                     </size>
                    </property>
+                   <property name="font">
+                    <font>
+                     <family>Roboto Slab</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                    <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                    </property>
                    <property name="text">
                     <string>PROFILE</string>
@@ -3442,12 +3473,20 @@ border-width: 0px;</string>
                      <height>40</height>
                     </size>
                    </property>
+                   <property name="font">
+                    <font>
+                     <family>Roboto Slab</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                    <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                    </property>
                    <property name="text">
                     <string>CLASSES</string>
@@ -3467,7 +3506,7 @@ border-width: 0px;</string>
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
+                <string notr="true"/>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -3494,7 +3533,7 @@ border-width: 0px;</string>
                 <item>
                  <widget class="QStackedWidget" name="stackedWidget_3">
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="t_profile_page">
                    <layout class="QGridLayout" name="gridLayout_17">
@@ -3522,135 +3561,137 @@ border-width: 0px;</string>
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_25">
+                         <property name="minimumSize">
+                          <size>
+                           <width>400</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>400</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Roboto Slab SemiBold</family>
+                           <pointsize>32</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">text-transform: uppercase;
+color: #F79E02;
+border-bottom: 5px solid #F79E02;</string>
+                         </property>
+                         <property name="text">
+                          <string>Profile</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_10">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeType">
+                          <enum>QSizePolicy::Fixed</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>10</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
                        <item>
                         <widget class="QTableWidget" name="t_profile_table">
+                         <property name="font">
+                          <font>
+                           <family>Montserrat SemiBold</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
                          <property name="styleSheet">
-                          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                          <string notr="true">QHeaderView::section {
+	font: 16pt 'Monsterrat Semibold';
+	color: #0074E1;
+	text-transform: uppercase;
+	width: 220px;
+}</string>
                          </property>
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
                          </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Sunken</enum>
-                         </property>
-                         <property name="lineWidth">
-                          <number>0</number>
-                         </property>
                          <property name="showGrid">
                           <bool>false</bool>
-                         </property>
-                         <property name="sortingEnabled">
-                          <bool>true</bool>
                          </property>
                          <attribute name="horizontalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
-                         <attribute name="horizontalHeaderMinimumSectionSize">
-                          <number>52</number>
-                         </attribute>
-                         <attribute name="horizontalHeaderHighlightSections">
-                          <bool>true</bool>
-                         </attribute>
-                         <attribute name="verticalHeaderVisible">
-                          <bool>false</bool>
-                         </attribute>
-                         <attribute name="verticalHeaderMinimumSectionSize">
-                          <number>40</number>
-                         </attribute>
-                         <attribute name="verticalHeaderDefaultSectionSize">
-                          <number>40</number>
-                         </attribute>
                          <row>
                           <property name="text">
-                           <string>First Name         </string>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
+                           <string>New Row</string>
                           </property>
                          </row>
                          <row>
                           <property name="text">
-                           <string>Last Name     </string>
+                           <string>First Name</string>
                           </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
+                         </row>
+                         <row>
+                          <property name="text">
+                           <string>Last Name</string>
                           </property>
                          </row>
                          <row>
                           <property name="text">
                            <string>Address</string>
                           </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
                          </row>
                          <row>
                           <property name="text">
                            <string>City</string>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                         </row>
-                         <row>
-                          <property name="text">
-                           <string>State</string>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                         </row>
-                         <row>
-                          <property name="text">
-                           <string>Date of Birth          </string>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
                           </property>
                          </row>
                          <row>
                           <property name="text">
                            <string>Phone</string>
                           </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
+                         </row>
+                         <row>
+                          <property name="text">
+                           <string>New Row</string>
                           </property>
                          </row>
                          <row>
                           <property name="text">
                            <string>Email</string>
                           </property>
-                          <property name="font">
-                           <font>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
                          </row>
                          <column>
                           <property name="text">
-                           <string>1</string>
+                           <string>New Column</string>
                           </property>
                          </column>
                         </widget>
@@ -3708,8 +3749,16 @@ border-width: 0px;</string>
                              <height>16777215</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">border: 1px solid #808080;</string>
+                            <string notr="true">background-color: #1B9CE5;
+border: none;
+color: #ffffff;</string>
                            </property>
                           </widget>
                          </item>
@@ -3750,8 +3799,20 @@ border-width: 0px;</string>
                        </item>
                        <item>
                         <widget class="QTableWidget" name="t_grades_allgrades_table">
+                         <property name="font">
+                          <font>
+                           <family>Montserrat SemiBold</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
                          <property name="styleSheet">
-                          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                          <string notr="true">QHeaderView::section {
+	font: 16pt 'Monsterrat Black';
+	color: #0074E1;
+	text-transform: uppercase;
+	height: 50px;
+	outline: none;
+}</string>
                          </property>
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
@@ -3765,6 +3826,9 @@ border-width: 0px;</string>
                          <property name="rowCount">
                           <number>10</number>
                          </property>
+                         <attribute name="horizontalHeaderDefaultSectionSize">
+                          <number>200</number>
+                         </attribute>
                          <attribute name="verticalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
@@ -3834,12 +3898,20 @@ border-width: 0px;</string>
                              <height>40</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Roboto Slab</family>
+                             <pointsize>16</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                            <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                            </property>
                            <property name="text">
                             <string>ADD GRADE</string>
@@ -3854,12 +3926,20 @@ border-width: 0px;</string>
                              <height>40</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Roboto Slab</family>
+                             <pointsize>16</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                            <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                            </property>
                            <property name="text">
                             <string>EDIT GRADE</string>
@@ -3879,8 +3959,8 @@ border-width: 0px;</string>
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>435</width>
-                      <height>381</height>
+                      <width>510</width>
+                      <height>391</height>
                      </rect>
                     </property>
                     <property name="frameShape">
@@ -3889,7 +3969,44 @@ border-width: 0px;</string>
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_16">
+                    <layout class="QVBoxLayout" name="verticalLayout_19">
+                     <item>
+                      <widget class="QLabel" name="label_26">
+                       <property name="font">
+                        <font>
+                         <family>Roboto Slab SemiBold</family>
+                         <pointsize>32</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">text-transform: uppercase;
+color: #F79E02;
+border-bottom: 5px solid #F79E02;</string>
+                       </property>
+                       <property name="text">
+                        <string>Add Grade</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_12">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>10</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <layout class="QVBoxLayout" name="verticalLayout_2">
                        <item>
@@ -3898,22 +4015,29 @@ border-width: 0px;</string>
                           <widget class="QLabel" name="label_19">
                            <property name="minimumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+
+</string>
                            </property>
                            <property name="text">
                             <string>Class</string>
@@ -3934,6 +4058,12 @@ border-width: 0px;</string>
                              <height>30</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">
 border: 1px solid #808080;</string>
@@ -3948,22 +4078,28 @@ border: 1px solid #808080;</string>
                           <widget class="QLabel" name="label_13">
                            <property name="minimumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+</string>
                            </property>
                            <property name="text">
                             <string>Name</string>
@@ -3984,6 +4120,12 @@ border: 1px solid #808080;</string>
                              <height>30</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">
 border: 1px solid #808080;</string>
@@ -3998,22 +4140,28 @@ border: 1px solid #808080;</string>
                           <widget class="QLabel" name="label_16">
                            <property name="minimumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+</string>
                            </property>
                            <property name="text">
                             <string>Test Number</string>
@@ -4036,7 +4184,8 @@ border: 1px solid #808080;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <property name="cursor">
@@ -4059,22 +4208,28 @@ border: 1px solid #808080;</string>
                           <widget class="QLabel" name="label_17">
                            <property name="minimumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+</string>
                            </property>
                            <property name="text">
                             <string>Test Date</string>
@@ -4097,7 +4252,8 @@ border: 1px solid #808080;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <property name="styleSheet">
@@ -4150,22 +4306,28 @@ border: 1px solid #808080;</string>
                           <widget class="QLabel" name="label_18">
                            <property name="minimumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+</string>
                            </property>
                            <property name="text">
                             <string>Grade</string>
@@ -4188,7 +4350,8 @@ border: 1px solid #808080;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <property name="cursor">
@@ -4206,6 +4369,22 @@ border: 1px solid #808080;</string>
                         </layout>
                        </item>
                        <item>
+                        <spacer name="verticalSpacer_11">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeType">
+                          <enum>QSizePolicy::Fixed</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>10</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
                         <widget class="QPushButton" name="t_addgrade_submit_btn">
                          <property name="minimumSize">
                           <size>
@@ -4219,12 +4398,20 @@ border: 1px solid #808080;</string>
                            <height>40</height>
                           </size>
                          </property>
+                         <property name="font">
+                          <font>
+                           <family>Roboto Slab</family>
+                           <pointsize>16</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                          <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                          </property>
                          <property name="text">
                           <string>SUBMIT GRADE</string>
@@ -4242,8 +4429,8 @@ border-width: 0px;</string>
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>435</width>
-                      <height>261</height>
+                      <width>511</width>
+                      <height>391</height>
                      </rect>
                     </property>
                     <property name="frameShape">
@@ -4252,9 +4439,46 @@ border-width: 0px;</string>
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_22">
+                    <layout class="QVBoxLayout" name="verticalLayout_20">
                      <item>
                       <layout class="QVBoxLayout" name="verticalLayout_17">
+                       <item>
+                        <widget class="QLabel" name="label_27">
+                         <property name="font">
+                          <font>
+                           <family>Roboto Slab SemiBold</family>
+                           <pointsize>32</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">text-transform: uppercase;
+color: #F79E02;
+border-bottom: 5px solid #F79E02;</string>
+                         </property>
+                         <property name="text">
+                          <string>Edit Grade</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_13">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeType">
+                          <enum>QSizePolicy::Fixed</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>10</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
                        <item>
                         <layout class="QHBoxLayout" name="horizontalLayout_17">
                          <item>
@@ -4262,21 +4486,28 @@ border-width: 0px;</string>
                            <property name="minimumSize">
                             <size>
                              <width>150</width>
-                             <height>20</height>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+
+</string>
                            </property>
                            <property name="text">
                             <string>Class</string>
@@ -4297,6 +4528,12 @@ border-width: 0px;</string>
                              <height>30</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">
 border: 1px solid #808080;</string>
@@ -4312,21 +4549,28 @@ border: 1px solid #808080;</string>
                            <property name="minimumSize">
                             <size>
                              <width>150</width>
-                             <height>20</height>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+
+</string>
                            </property>
                            <property name="text">
                             <string>Name</string>
@@ -4347,6 +4591,12 @@ border: 1px solid #808080;</string>
                              <height>30</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">
 border: 1px solid #808080;</string>
@@ -4362,21 +4612,28 @@ border: 1px solid #808080;</string>
                            <property name="minimumSize">
                             <size>
                              <width>150</width>
-                             <height>20</height>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+
+</string>
                            </property>
                            <property name="text">
                             <string>Test Number</string>
@@ -4390,6 +4647,12 @@ border: 1px solid #808080;</string>
                              <width>0</width>
                              <height>30</height>
                             </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
+                            </font>
                            </property>
                            <property name="styleSheet">
                             <string notr="true">
@@ -4406,21 +4669,28 @@ border: 1px solid #808080;</string>
                            <property name="minimumSize">
                             <size>
                              <width>150</width>
-                             <height>20</height>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>150</width>
-                             <height>20</height>
+                             <width>225</width>
+                             <height>40</height>
                             </size>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>16</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #0074E1;
+text-transform: uppercase;
+
+</string>
                            </property>
                            <property name="text">
                             <string>Grade</string>
@@ -4443,7 +4713,8 @@ border: 1px solid #808080;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <family>Montserrat SemiBold</family>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <property name="cursor">
@@ -4461,6 +4732,22 @@ border: 1px solid #808080;</string>
                         </layout>
                        </item>
                        <item>
+                        <spacer name="verticalSpacer_14">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeType">
+                          <enum>QSizePolicy::Fixed</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>10</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
                         <widget class="QPushButton" name="t_editgrade_submit_btn">
                          <property name="minimumSize">
                           <size>
@@ -4474,12 +4761,20 @@ border: 1px solid #808080;</string>
                            <height>40</height>
                           </size>
                          </property>
+                         <property name="font">
+                          <font>
+                           <family>Roboto Slab</family>
+                           <pointsize>16</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(180, 145, 76);
-font: 12pt &quot;Montserrat SemiBold&quot;;
-color: white;
-border-style: outset;
-border-width: 0px;</string>
+                          <string notr="true">background-color: #F79E02;
+color: #ffffff;
+border-style: none;
+border: 3px solid #F79E02;
+outline: none;</string>
                          </property>
                          <property name="text">
                           <string>SUBMIT NEW GRADE</string>

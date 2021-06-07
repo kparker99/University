@@ -307,7 +307,7 @@ class GUI_Window(qtw.QMainWindow):
             for x in range(len(info)):
                 lis.append(info[x][1])
                 avg = sum(lis)/len(lis)
-            self.ui.s_classgrades_totalgrade_field.setText("CLASS GRADE: {:.2f}%".format(avg))
+            self.ui.s_classgrades_totalgrade_field.setText("CLASS GRADE: {:.1f}%".format(avg))
             for row_number, row_data in enumerate(info):
                 for column_number, data in enumerate(row_data):
                     self.ui.s_classgrades_grades_table.setItem(row_number, column_number, qtw.QTableWidgetItem(str(data)))
