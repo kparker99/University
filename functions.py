@@ -34,7 +34,6 @@ class GUI_Window(qtw.QMainWindow):
         # page 0 (login_page)
         self.ui.l_login_btn.clicked.connect(self._login)
         self.ui.l_newaccount_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
-        self.ui.l_newaccount_btn.clicked.connect(self._center_window)
 
         # page 1 (new_account_page)
         self.ui.n_firstname_field.textChanged.connect(self._are_fields_empty)
@@ -107,14 +106,6 @@ class GUI_Window(qtw.QMainWindow):
         message.setWindowTitle(title)
         message.setText(text)
         message.exec()
-
-    def _center_window(self):
-        '''centers the window to user's screen by centering stackedWidget to center of screen'''
-        screen = app.primaryScreen()
-        rect = self.ui.stackedWidget.geometry()
-        cp = screen.availableGeometry().center()
-        rect.moveCenter(cp)
-        self.move(rect.topLeft())
 
     def _login(self):
         '''logs into main window based on role (student, teacher, admin)'''
