@@ -40,8 +40,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_18.setObjectName("verticalLayout_18")
         self.frame = QtWidgets.QFrame(self.login_page)
-        self.frame.setStyleSheet("background-image: url(\'C:/Users/kevin/university/images/1623281456282.png\');\n"
-"background-size: cover;")
+        self.frame.setStyleSheet("background-image: url(\'C:/Users/kevin/university/images/1623281456282.png\');")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -1987,7 +1986,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(2)
-        self.stackedWidget_2.setCurrentIndex(3)
+        self.stackedWidget_2.setCurrentIndex(1)
         self.stackedWidget_3.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

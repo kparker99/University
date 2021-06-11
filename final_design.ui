@@ -75,8 +75,7 @@
         <item>
          <widget class="QFrame" name="frame">
           <property name="styleSheet">
-           <string notr="true">background-image: url('C:/Users/kevin/university/images/1623281456282.png');
-background-size: cover;</string>
+           <string notr="true">background-image: url('C:/Users/kevin/university/images/1623281456282.png');</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -2234,7 +2233,7 @@ outline: none;</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>3</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="s_profile_page">
                    <property name="minimumSize">
