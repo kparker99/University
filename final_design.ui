@@ -53,7 +53,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -75,7 +75,8 @@
         <item>
          <widget class="QFrame" name="frame">
           <property name="styleSheet">
-           <string notr="true">background-image: url('C:/Users/kevin/university/images/1623281456282.png');</string>
+           <string notr="true">background-image: url('C:/Users/kevin/university/images/1623281456282.png');
+background-size: cover;</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -127,7 +128,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">background: none;</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -979,7 +980,7 @@ color: #ffffff;</string>
         <item>
          <widget class="QFrame" name="frame_3">
           <property name="styleSheet">
-           <string notr="true">background-image: url('C:/Users/kevin/university/images/1623281456282.png');</string>
+           <string notr="true">background-image: url('C:/Users/kevin/university/images/n_bg.png');</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
