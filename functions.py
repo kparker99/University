@@ -209,7 +209,7 @@ class GUI_Window(qtw.QMainWindow):
             self._message("New User Created", "your username is " + username)
             self.ui.stackedWidget.setCurrentIndex(0)
         else:
-            return self._message("Password Invalid", "Error Passwords do not match")
+            return self._message("Password Invalid", "Passwords do not match")
 
     def s_classgrades_enrolled_classes(self, username):
         '''gets a list of classes student is enrolled in upon login'''
