@@ -111,6 +111,7 @@ class GUI_Window(qtw.QMainWindow):
         '''logs into main window based on role (student, teacher, admin)'''
         if self.ui.l_username_field.text() and self.ui.l_password_field.text():
             username = self.ui.l_username_field.text()
+            print(username)
             password = self.ui.l_password_field.text()
         else:
             return self._message("Missing Information", "Please enter a username and password")

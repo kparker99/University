@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b20a0e-5d01-4765-8d3f-81b4f8cb03a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/design.py" beforeDir="false" afterPath="$PROJECT_DIR$/design.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_design.ui" beforeDir="false" afterPath="$PROJECT_DIR$/final_design.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
