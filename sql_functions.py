@@ -1,7 +1,7 @@
 import pymysql
 
 def enter_into_db(command, data):
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='8Jk$4*j!M.3f', db='University')
+    conn = pymysql.connect(host='[redacted]', user='[redacted]', password='[redacted]', db='[redacted]')
     c = conn.cursor()
     try:
         c.execute(command, data)
