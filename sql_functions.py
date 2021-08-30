@@ -1,7 +1,14 @@
 import pymysql
+import os
+
+host = os.environ.get('university_host')
+user = os.environ.get('university_user')
+password = os.environ.get('university_password')
+db = os.environ.get('university_database')
+
 
 def enter_into_db(command, data):
-    conn = pymysql.connect(host='[redacted]', user='[redacted]', password='[redacted]', db='[redacted]')
+    conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
         c.execute(command, data)
@@ -11,8 +18,8 @@ def enter_into_db(command, data):
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
 
 
-def get_info_from_db(query, variable = None):
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='8Jk$4*j!M.3f', db='University')
+def get_info_from_db(query, variable=None):
+    conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
         result = c.execute(query, variable)
@@ -21,8 +28,9 @@ def get_info_from_db(query, variable = None):
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
     return info
 
-def get_one_info_from_db(query, variable = None):
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='8Jk$4*j!M.3f', db='University')
+
+def get_one_info_from_db(query, variable=None):
+    conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
         result = c.execute(query, variable)
@@ -30,4 +38,3 @@ def get_one_info_from_db(query, variable = None):
     except pymysql.Error as e:
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
     return info
-
