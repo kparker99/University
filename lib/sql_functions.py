@@ -7,7 +7,7 @@ password = os.environ.get('university_password')
 db = os.environ.get('university_database')
 
 
-def enter_into_db(command, data):
+def write(command, data):
     conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
@@ -18,23 +18,25 @@ def enter_into_db(command, data):
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
 
 
-def get_info_from_db(query, variable=None):
+def get(query, variable=None):
     conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
-        result = c.execute(query, variable)
+        c.execute(query, variable)
         info = c.fetchall()
     except pymysql.Error as e:
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
-    return info
+    else:
+        return info
 
 
-def get_one_info_from_db(query, variable=None):
+def get_one(query, variable=None):
     conn = pymysql.connect(host, user, password, db)
     c = conn.cursor()
     try:
-        result = c.execute(query, variable)
+        c.execute(query, variable)
         info = c.fetchone()
     except pymysql.Error as e:
         return print("could not close connection error pymysql %d: %s" % (e.args[0], e.args[1]))
-    return info
+    else:
+        return info
